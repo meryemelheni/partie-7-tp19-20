@@ -9,19 +9,19 @@ spec:
   goTemplateOptions: ["missingkey=error"]
   generators:
     - git:
-        repoURL: https://github.com/meryemelheni/tp19-gitops.git
+        repoURL: https://github.com/meryemelheni/partie-7-tp19-20.git
         revision: main
         directories:
-          - path: envs/*
+          path: tp19/envs/*
   template:
     metadata:
       name: "whoami-{{ .path.basename }}"
     spec:
       project: default
       source:
-        repoURL: https://github.com/meryemelheni/tp19-gitops.git
+        repoURL: https://github.com/meryemelheni/partie-7-tp19-20.git
         targetRevision: main
-        path: "{{ .path.path }}"
+        path: '{{.path.path}}'
       destination:
         server: https://kubernetes.default.svc
         namespace: "whoami-{{ .path.basename }}"
