@@ -7,13 +7,15 @@ metadata:
 spec:
   project: default
   source:
-   repoURL: https://github.com/meryemelheni/partie-7-tp19-20.git
+    repoURL: https://github.com/meryemelheni/partie-7-tp19-20.git
     targetRevision: main
     path: tp19/envs/dev
   destination:
     server: https://kubernetes.default.svc
     namespace: whoami-dev
   syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true
-    # TODO (partie 3) : synchronisation automatique avec prune et selfHeal
