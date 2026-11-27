@@ -7,9 +7,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/meryemelheni/tp19-gitops.git
+   repoURL: https://github.com/meryemelheni/partie-7-tp19-20.git
     targetRevision: main
-    path: envs/dev
+    path: tp19/envs/dev
   destination:
     server: https://kubernetes.default.svc
     namespace: whoami-dev
